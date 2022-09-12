@@ -12,7 +12,6 @@ export const StockData = ({ symbol }) => {
             symbol,
           },
         });
-        console.log('res ', response);
         if (isMounted) {
           setStockData(response.data);
         }

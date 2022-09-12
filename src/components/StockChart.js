@@ -4,7 +4,6 @@ import Chart from 'react-apexcharts';
 export const StockChart = ({ chartData, symbol }) => {
   const [dateFormat, setDateFormat] = useState('24h');
   const { day, week, year } = chartData;
-  console.log('ait ghour :    ', chartData);
   const determineTimeFormat = () => {
     switch (dateFormat) {
       case '24h':
