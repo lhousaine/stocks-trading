@@ -36,6 +36,11 @@ export const StockChart = ({ chartData, symbol }) => {
       },
     },
     xaxis: {
+      title: {
+        text: 'Time',
+        offsetX: 0,
+        offsetY: 0,
+      },
       type: 'datetime',
       labels: {
         datetimeUTC: false,
@@ -44,6 +49,15 @@ export const StockChart = ({ chartData, symbol }) => {
     tooltip: {
       x: {
         format: 'MMM dd HH:MM',
+      },
+    },
+    yaxis: {
+      show: true,
+      title: {
+        text: 'Close Price',
+        rotate: -90,
+        offsetX: 0,
+        offsetY: 0,
       },
     },
   };
