@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import finnHub from '../apis/finnHub';
 import { StockChart } from '../components/StockChart';
 import { StockData } from '../components/StockData';
+import { BsArrowUpLeft } from 'react-icons/bs';
 
 const formatData = (data) => {
   return data.t.map((el, index) => {
@@ -16,6 +17,11 @@ const formatData = (data) => {
 export const StockDetailsPage = () => {
   const [chartData, setChartData] = useState(null);
   const { symbol } = useParams();
+  const navigate = useNavigate();
+
+  const handleReturnToOverviewPage = () => {
+    navigate('/');
+  };
   useEffect(() => {
     const fetchData = async () => {
       const date = new Date();
@@ -68,7 +74,16 @@ export const StockDetailsPage = () => {
   }, [symbol]);
 
   return (
-    <div>
+    <div className='container'>
+      <div>
+        <button
+          className='mt-5 btn btn-primary'
+          onClick={handleReturnToOverviewPage}
+        >
+          <BsArrowUpLeft />
+          <span>To Overview Page</span>
+        </button>
+      </div>
       {chartData && (
         <div>
           <StockChart chartData={chartData} symbol={symbol} />
