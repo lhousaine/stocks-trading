@@ -40,12 +40,12 @@ export const StockData = ({ symbol }) => {
           </div>
           <div className='col'>
             <div>
-              <span className='fw-bold'>Exchange:</span>
+              <span className='fw-bold'>Exchange: </span>
               {stockData.exchange}
             </div>
             <div>
-              <span className='fw-bold'>Industry:</span>
-              {stockData.industry}
+              <span className='fw-bold'>Industry: </span>
+              {stockData.finnhubIndustry}
             </div>
             <div>
               <span className='fw-bold'>IPO: </span>
@@ -62,7 +62,7 @@ export const StockData = ({ symbol }) => {
               {stockData.shareOutstanding}
             </div>
             <div>
-              <span className='fw-bold'>Url:</span>
+              <span className='fw-bold'>Url: </span>
               <a href={stockData.weburl}>{stockData.weburl}</a>
             </div>
           </div>
