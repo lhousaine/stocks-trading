@@ -55,13 +55,13 @@ export const StockList = () => {
         <thead style={{ color: 'rgb(79,89,102)' }}>
           <tr>
             <th scope='col'>Name</th>
-            <th scope='col'>Last</th>
-            <th scope='col'>Chg</th>
-            <th scope='col'>Chg%</th>
-            <th scope='col'>High</th>
-            <th scope='col'>Low</th>
-            <th scope='col'>Open</th>
-            <th scope='col'>Pclose</th>
+            <th scope='col'>Current price</th>
+            <th scope='col'>Change</th>
+            <th scope='col'>Percent change</th>
+            <th scope='col'>High price</th>
+            <th scope='col'>Low price</th>
+            <th scope='col'>Open price</th>
+            <th scope='col'>Previous close price</th>
           </tr>
         </thead>
         <tbody>
