@@ -3,6 +3,7 @@ import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import finnHub from '../apis/finnHub';
 import { WatchListContext } from '../context/watchListContext';
+import Loading from './Loading';
 
 export const StockList = () => {
   const [stock, setStock] = useState();
@@ -105,6 +106,6 @@ export const StockList = () => {
       </table>
     </div>
   ) : (
-    'Loading...'
+    <Loading />
   );
 };
